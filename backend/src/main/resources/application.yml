@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/flightsdb
+    username: flights
+    password: flights
+  jpa:
+    hibernate:
+      ddl-auto: update   # deja que Hibernate cree/actualice tablas automáticamente
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+app:
+  jwt:
+    secret: "EsteEsUnSuperSecretoLargoDeMasDeTreintaYDoceCaracteres!!!123456"
+    expiration-minutes: 120
