@@ -27,6 +27,10 @@ public class DataSeeder {
             if (userRepo.findByUsername("user").isEmpty()) {
                 userRepo.save(new User(null, "user", encoder.encode("user123"), Role.USER));
             }
+            // Juan NO es admin por defecto
+            if (userRepo.findByUsername("juan").isEmpty()) {
+                userRepo.save(new User(null, "juan", encoder.encode("1234"), Role.USER));
+            }
 
             // Vuelos
             if (flightRepo.count() == 0) {
