@@ -1,0 +1,12 @@
+<h2>Register</h2>
+<form (ngSubmit)="onSubmit()">
+  <label>Username:</label>
+  <input [(ngModel)]="username" name="username" required />
+
+  <label>Password:</label>
+  <input [(ngModel)]="password" name="password" type="password" required />
+
+  <button type="submit">Register</button>
+</form>
+
+<p *ngIf="error" style="color:red;">{{ error }}</p>
