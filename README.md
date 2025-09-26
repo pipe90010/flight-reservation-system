@@ -1,3 +1,154 @@
+# Flight Reservation System
+
+This project is a **full-stack flight reservation system** built with:
+
+-   **Backend:** Spring Boot (Java 17)
+-   **Frontend:** Angular 20
+-   **Database:** PostgreSQL
+
+It provides user authentication (login/register with JWT), role-based
+access (user/admin), and a CRUD interface for managing flights.
+
+------------------------------------------------------------------------
+
+## 🚀 Prerequisites
+
+Before running the project, ensure you have installed:
+
+-   [Java 17+](https://adoptium.net/)
+-   [Node.js 20+](https://nodejs.org/)
+-   [Angular CLI 20+](https://angular.io/cli)
+-   [PostgreSQL 15+](https://www.postgresql.org/)
+-   [Git](https://git-scm.com/)
+
+------------------------------------------------------------------------
+
+## 🗄️ Database Setup
+
+1.  Start PostgreSQL and create a database:
+
+``` sql
+CREATE DATABASE flight_reservation;
+```
+
+2.  Update the database credentials in:
+
+```{=html}
+<!-- -->
+```
+    backend/src/main/resources/application.properties
+
+Example:
+
+``` properties
+spring.datasource.url=jdbc:postgresql://localhost:5432/flight_reservation
+spring.datasource.username=postgres
+spring.datasource.password=yourpassword
+spring.jpa.hibernate.ddl-auto=update
+```
+
+------------------------------------------------------------------------
+
+## ⚙️ Backend Setup (Spring Boot)
+
+1.  Navigate to the backend folder:
+
+``` bash
+cd backend
+```
+
+2.  Build and run the backend:
+
+``` bash
+./mvnw spring-boot:run
+```
+
+The backend will be available at:\
+👉 <http://localhost:8080>
+
+3.  API Documentation is available with Swagger UI:\
+    👉 <http://localhost:8080/swagger-ui.html>
+
+------------------------------------------------------------------------
+
+## 🎨 Frontend Setup (Angular)
+
+1.  Navigate to the frontend folder:
+
+``` bash
+cd frontend
+```
+
+2.  Install dependencies:
+
+``` bash
+npm install
+```
+
+3.  Run the development server:
+
+``` bash
+ng serve -o
+```
+
+The frontend will be available at:\
+👉 <http://localhost:4200>
+
+------------------------------------------------------------------------
+
+## 🔐 Authentication
+
+-   Register a new user via `/api/auth/register` or Swagger UI.
+-   Login via `/api/auth/login` to obtain a **JWT token**.
+-   The token is stored in `localStorage` and automatically attached to
+    requests.
+
+------------------------------------------------------------------------
+
+## ✈️ Features
+
+-   User registration and login with JWT authentication
+-   Role-based access control (User / Admin)
+-   CRUD operations for flights (Admin only)
+-   View available flights (User)
+-   Integrated Swagger UI for API testing
+
+------------------------------------------------------------------------
+
+## 📂 Project Structure
+
+    flight-reservation-system/
+    │── backend/        # Spring Boot application
+    │── frontend/       # Angular application
+    │── README.md       # Project documentation
+
+------------------------------------------------------------------------
+
+## 🛠️ Tech Stack
+
+-   **Spring Boot 3.5.6**
+-   **Angular 20**
+-   **PostgreSQL 15**
+-   **Swagger (OpenAPI 3.0)**
+-   **JWT Authentication**
+
+------------------------------------------------------------------------
+
+## 🤝 Contributing
+
+1.  Fork the repository
+2.  Create a feature branch (`git checkout -b feature/my-feature`)
+3.  Commit your changes (`git commit -m "Add my feature"`)
+4.  Push to the branch (`git push origin feature/my-feature`)
+5.  Open a Pull Request
+
+------------------------------------------------------------------------
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+
 # ✈️ Flight Reservation System
 
 Este proyecto es una aplicación **Fullstack** para reservar vuelos.  

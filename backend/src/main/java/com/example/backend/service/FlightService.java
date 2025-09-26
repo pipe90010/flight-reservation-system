@@ -31,4 +31,8 @@ public class FlightService {
     public void delete(Long id) {
         repo.deleteById(id);
     }
+
+    public Flight createFlight(Flight flight) {
+        return repo.save(flight);
+    }
 }
